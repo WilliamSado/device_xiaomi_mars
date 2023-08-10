@@ -430,6 +430,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_sm8350
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
