@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mars.mk
+    $(LOCAL_DIR)/arrow_mars.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_mars-user \
-    lineage_mars-userdebug \
-    lineage_mars-eng
+    arrow_mars-user \
+    arrow_mars-userdebug \
+    arrow_mars-eng

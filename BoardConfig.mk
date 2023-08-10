@@ -71,7 +71,6 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/hidl/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/hidl/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/hidl/manifest_lahaina.xml \
@@ -79,7 +78,7 @@ DEVICE_MANIFEST_FILE := \
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
-TARGET_KERNEL_CONFIG := vendor/mars_defconfig
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/star_QGKI.config
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -110,19 +109,9 @@ BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOOT_KERNEL_MODULES := \
     fts_touch_spi.ko \
     hwid.ko \
+    msm_drm.ko \
     xiaomi_touch.ko
-
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
-
-# LiveDisplay
-ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
-SOONG_CONFIG_NAMESPACES += livedisplay
-SOONG_CONFIG_livedisplay += enabled
-SOONG_CONFIG_livedisplay_enabled := true
-DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/hidl/manifest_lineage.xml
-endif
 
 # NFC
 TARGET_USES_NQ_NFC := true
