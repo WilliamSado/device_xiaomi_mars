@@ -59,26 +59,26 @@ SOONG_CONFIG_dolby_vision += enabled
 SOONG_CONFIG_dolby_vision_enabled := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/platform/config.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/hidl/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/platform/hidl/compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/hidl/vendor_framework_compatibility_matrix.xml \
-    $(DEVICE_PATH)/hidl/xiaomi_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/platform/hidl/vendor_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/platform/hidl/xiaomi_framework_compatibility_matrix.xml \
 
 DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/hidl/manifest_lahaina.xml \
-    $(DEVICE_PATH)/hidl/manifest_xiaomi.xml
+    $(DEVICE_PATH)/platform/hidl/manifest_lahaina.xml \
+    $(DEVICE_PATH)/platform/hidl/manifest_xiaomi.xml
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/star_QGKI.config
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/mars_QGKI.config
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -162,13 +162,14 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_BOARD_PLATFORM := lahaina
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/platform/power/power-mode.cpp
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/platform/props/odm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/platform/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/platform/props/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/platform/props/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/platform/props/product.prop
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -177,7 +178,7 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/platform/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -192,9 +193,9 @@ VENDOR_SECURITY_PATCH := 2022-12-01
 # Sepolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/platform/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/platform/sepolicy/public
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/platform/sepolicy/vendor
 
 # Soong
 SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
