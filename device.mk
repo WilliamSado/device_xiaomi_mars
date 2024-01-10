@@ -393,7 +393,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/android/overlay \
-    $(LOCAL_PATH)/android/overlay-pe
+    $(LOCAL_PATH)/android/overlay-custom
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
