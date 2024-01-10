@@ -80,7 +80,7 @@ DEVICE_MANIFEST_FILE := \
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/mars_QGKI.config
+TARGET_KERNEL_CONFIG := vendor/mars-qgki_defconfig
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -193,7 +193,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2022-12-01
 
 # Sepolicy
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/platform/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/platform/sepolicy/public

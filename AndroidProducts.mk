@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_mars.mk
+    $(LOCAL_DIR)/aosp_mars.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_mars-user \
-    arrow_mars-userdebug \
-    arrow_mars-eng
+    aosp_mars-user \
+    aosp_mars-userdebug \
+    aosp_mars-eng
