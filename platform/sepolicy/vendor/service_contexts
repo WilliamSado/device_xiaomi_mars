@@ -1,1 +1,4 @@
 miui_multi_display     u:object_r:miui_multi_display:s0
+
+# NFC
+vendor.nxp.nxpnfc_aidl.INxpNfc/default                                    u:object_r:hal_nfc_service:s0
