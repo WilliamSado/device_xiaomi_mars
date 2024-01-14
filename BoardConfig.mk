@@ -85,6 +85,9 @@ DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/platform/hidl/manifest_lahaina.xml \
     $(DEVICE_PATH)/platform/hidl/manifest_xiaomi.xml 
 
+# Inherit from proprietary files for miuicamera
+-include vendor/xiaomi/mars-miuicamera/products/board.mk
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
 TARGET_KERNEL_CONFIG := vendor/mars-qgki_defconfig
