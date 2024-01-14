@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from star's MIUI V14.0.6.0.TKACNXM
+# All unpinned blobs below are extracted from star's MIUI V14.0.11.0.TKACNXM
 
 # ADSP
 vendor/bin/adsprpcd
@@ -899,8 +899,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
-# These proprietary files are extracted from miui_STARGlobal_V14.0.2.0.TKAMIXM, note the pinned blobs
-
 # ACDB
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb
@@ -1631,3 +1629,6 @@ vendor/firmware/st_fts_k2_htp.ftb:vendor_ramdisk/lib/firmware/st_fts_k2_htp.ftb
 
 # Vibrator firmware
 vendor/firmware/aw8697_haptic.bin
+
+# Wifi Display
+vendor/lib/libwfdaac_vendor.so
