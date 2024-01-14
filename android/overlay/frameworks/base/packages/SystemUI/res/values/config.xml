@@ -15,6 +15,10 @@
         M0,0H194S123.711,-1.438 85,24C69.437,34.227 47.5,44.815 22,87 -2.227,127.084 0,194 0,194
     </string>
 
+    <!-- Comma-separated list of packages to exclude from camera protection. In our case,
+    ignore the gaze detection and faceunlock package -->
+    <string translatable="false" name="config_cameraProtectionExcludedPackages">org.pixelexperience.faceunlock,com.crdroid.faceunlock,co.aospa.sense</string>
+
     <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
     <bool name="config_roundedCornerMultipleRadius">true</bool>
 
