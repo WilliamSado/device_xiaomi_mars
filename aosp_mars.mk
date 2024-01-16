@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mars device
 $(call inherit-product, device/xiaomi/mars/device.mk)
 
-# Inherit some common PixelOS stuff.
+# Inherit some common Project-Elixir stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
@@ -21,6 +21,15 @@ PRODUCT_MODEL := M2102K1AC
 PRODUCT_NAME := aosp_mars
 
 TARGET_BOOT_ANIMATION_RES := 1440
+
+# Inherit some common Project Elixir stuff.
+ELIXIR_BUILD_TYPE := OFFICIAL
+EXTRA_UDFPS_ANIMATIONS := true
+IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_SYSTEM_NAME := mars_global
