@@ -23,6 +23,9 @@ $(call inherit-product-if-exists, vendor/MGC/config.mk)
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/mars/mars-vendor.mk)
 
+# Inherit from Paranoid Android
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
