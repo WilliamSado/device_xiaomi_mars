@@ -263,9 +263,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompa
 
 # QTI
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect.vendor
-
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
@@ -349,12 +346,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/platform/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-# VNDK
-# vndservicemanager has been removed from API30 devices (aosp/1235751)
-# but we still need it for display services.
-PRODUCT_PACKAGES += \
-    vndservicemanager
 
 # Verified boot
 PRODUCT_COPY_FILES += \

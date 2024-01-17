@@ -58,9 +58,6 @@ SOONG_CONFIG_NAMESPACES += dolby_vision
 SOONG_CONFIG_dolby_vision += enabled
 SOONG_CONFIG_dolby_vision_enabled := true
 
-# Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/platform/config.fs
-
 # Firmware
 -include vendor/xiaomi/mars-firmware/BoardConfigVendor.mk
 
@@ -73,8 +70,7 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/platform/hidl/compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/platform/hidl/vendor_framework_compatibility_matrix.xml \
-    $(DEVICE_PATH)/platform/hidl/xiaomi_framework_compatibility_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/platform/hidl/xiaomi_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/platform/hidl/manifest_lahaina.xml \
