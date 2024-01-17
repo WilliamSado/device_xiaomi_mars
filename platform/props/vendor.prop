@@ -61,7 +61,6 @@ ro.vendor.display.sensortype=2
 ro.surface_flinger.set_idle_timer_ms?=80
 ro.surface_flinger.set_idle_timer_ms?=350
 ro.vendor.sf.enable_fb_scaling=1
-vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.enable_async_powermode=0
 vendor.display.enable_early_wakeup=1
