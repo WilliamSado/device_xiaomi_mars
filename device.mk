@@ -249,6 +249,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
+
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_sm8350
