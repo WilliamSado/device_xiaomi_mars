@@ -352,8 +352,6 @@ PRODUCT_COPY_FILES += \
 
 # Minijail
 PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail_vendor \
     libavservices_minijail.vendor
 
 # Native libraries whitelist
@@ -415,23 +413,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.0.vendor \
-    vendor.qti.hardware.perf@2.1.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/platform/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_sm8350
@@ -452,6 +433,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/platform/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/platform/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext-privapp-permissions-qti.xml
+
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
 
 # Radio
 PRODUCT_PACKAGES += \
