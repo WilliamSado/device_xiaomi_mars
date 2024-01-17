@@ -68,7 +68,7 @@ LOC_HIDL_VERSION := 4.0
 # HIDL
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/platform/hidl/compatibility_matrix.xml
 
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/platform/hidl/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/platform/hidl/xiaomi_framework_compatibility_matrix.xml
 
