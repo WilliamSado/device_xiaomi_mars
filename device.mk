@@ -120,6 +120,9 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Display
 TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
