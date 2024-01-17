@@ -29,6 +29,10 @@ $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
