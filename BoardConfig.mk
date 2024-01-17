@@ -77,23 +77,17 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/platform/hidl/manifest_xiaomi.xml 
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
-TARGET_KERNEL_CONFIG := vendor/mars-qgki_defconfig
+KERNEL_DEFCONFIG :=  vendor/mars-qgki_defconfig
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
-
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
-TARGET_KERNEL_CLANG_COMPILE := true
-
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
-BOARD_KERNEL_CMDLINE += androidboot.memcg=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8
@@ -113,6 +107,108 @@ BOOT_KERNEL_MODULES := \
     msm_drm.ko \
     xiaomi_touch.ko
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+
+BOARD_VENDOR_KERNEL_MODULES += \
+	$(KERNEL_MODULES_OUT)/adsp_loader_dlkm.ko  \
+	$(KERNEL_MODULES_OUT)/apr_dlkm.ko  \
+	$(KERNEL_MODULES_OUT)/bolero_cdc_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/bt_fm_slim.ko \
+	$(KERNEL_MODULES_OUT)/btpower.ko \
+	$(KERNEL_MODULES_OUT)/camera.ko \
+	$(KERNEL_MODULES_OUT)/cnss2.ko \
+	$(KERNEL_MODULES_OUT)/cs35l41_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/cyttsp5.ko \
+	$(KERNEL_MODULES_OUT)/cyttsp5_device_access.ko \
+	$(KERNEL_MODULES_OUT)/cyttsp5_i2c.ko \
+	$(KERNEL_MODULES_OUT)/cyttsp5_loader.ko \
+	$(KERNEL_MODULES_OUT)/e4000.ko \
+	$(KERNEL_MODULES_OUT)/fc0011.ko \
+	$(KERNEL_MODULES_OUT)/fc0012.ko \
+	$(KERNEL_MODULES_OUT)/fc0013.ko \
+	$(KERNEL_MODULES_OUT)/fc2580.ko \
+	$(KERNEL_MODULES_OUT)/fts_touch_spi.ko \
+	$(KERNEL_MODULES_OUT)/goodix_fod.ko \
+	$(KERNEL_MODULES_OUT)/hdmi_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/hid-aksys.ko \
+	$(KERNEL_MODULES_OUT)/hwid.ko \
+	$(KERNEL_MODULES_OUT)/icnss2.ko \
+	$(KERNEL_MODULES_OUT)/ir-spi.ko \
+	$(KERNEL_MODULES_OUT)/it913x.ko \
+	$(KERNEL_MODULES_OUT)/leds-qti-flash.ko \
+	$(KERNEL_MODULES_OUT)/llcc_perfmon.ko \
+	$(KERNEL_MODULES_OUT)/m88rs6000t.ko \
+	$(KERNEL_MODULES_OUT)/machine_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/max2165.ko \
+	$(KERNEL_MODULES_OUT)/mbhc_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/mc44s803.ko \
+	$(KERNEL_MODULES_OUT)/mi_thermal_interface.ko \
+	$(KERNEL_MODULES_OUT)/mmhardware_others.ko \
+	$(KERNEL_MODULES_OUT)/mmhardware_sysfs_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/msi001.ko \
+	$(KERNEL_MODULES_OUT)/msm_drm.ko \
+	$(KERNEL_MODULES_OUT)/mt2060.ko \
+	$(KERNEL_MODULES_OUT)/mt2063.ko \
+	$(KERNEL_MODULES_OUT)/mt20xx.ko \
+	$(KERNEL_MODULES_OUT)/mt2131.ko \
+	$(KERNEL_MODULES_OUT)/mt2266.ko \
+	$(KERNEL_MODULES_OUT)/mxl301rf.ko \
+	$(KERNEL_MODULES_OUT)/mxl5005s.ko \
+	$(KERNEL_MODULES_OUT)/mxl5007t.ko \
+	$(KERNEL_MODULES_OUT)/native_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/pinctrl_lpi_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/pinctrl_wcd_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/platform_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/q6_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/q6_notifier_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/q6_pdr_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/qcom_edac.ko \
+	$(KERNEL_MODULES_OUT)/qm1d1b0004.ko \
+	$(KERNEL_MODULES_OUT)/qm1d1c0042.ko \
+	$(KERNEL_MODULES_OUT)/qt1010.ko \
+	$(KERNEL_MODULES_OUT)/qti_battery_charger_main.ko \
+	$(KERNEL_MODULES_OUT)/r820t.ko \
+	$(KERNEL_MODULES_OUT)/radio-i2c-rtc6226-qca.ko \
+	$(KERNEL_MODULES_OUT)/rdbg.ko \
+	$(KERNEL_MODULES_OUT)/rmnet_core.ko \
+	$(KERNEL_MODULES_OUT)/rmnet_ctl.ko \
+	$(KERNEL_MODULES_OUT)/rmnet_offload.ko \
+	$(KERNEL_MODULES_OUT)/rmnet_shs.ko \
+	$(KERNEL_MODULES_OUT)/rx_macro_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/si2157.ko \
+	$(KERNEL_MODULES_OUT)/slimbus-ngd.ko \
+	$(KERNEL_MODULES_OUT)/slimbus.ko \
+	$(KERNEL_MODULES_OUT)/snd_event_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/stmvl53l5.ko \
+	$(KERNEL_MODULES_OUT)/stub_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/swr_ctrl_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/swr_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/swr_dmic_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/swr_haptics_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/tda18212.ko \
+	$(KERNEL_MODULES_OUT)/tda18218.ko \
+	$(KERNEL_MODULES_OUT)/tda18250.ko \
+	$(KERNEL_MODULES_OUT)/tda9887.ko \
+	$(KERNEL_MODULES_OUT)/tea5761.ko \
+	$(KERNEL_MODULES_OUT)/tea5767.ko \
+	$(KERNEL_MODULES_OUT)/tua9001.ko \
+	$(KERNEL_MODULES_OUT)/tuner-simple.ko \
+	$(KERNEL_MODULES_OUT)/tuner-types.ko \
+	$(KERNEL_MODULES_OUT)/tuner-xc2028.ko \
+	$(KERNEL_MODULES_OUT)/tx_macro_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/us_prox_iio.ko \
+	$(KERNEL_MODULES_OUT)/va_macro_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd937x_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd937x_slave_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd938x_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd938x_slave_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd9xxx_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wcd_core_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wlan.ko \
+	$(KERNEL_MODULES_OUT)/wsa883x_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/wsa_macro_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/xc4000.ko \
+	$(KERNEL_MODULES_OUT)/xc5000.ko \
+		$(KERNEL_MODULES_OUT)/xiaomi_touch.ko
 
 # Lineage Health
 # TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
