@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/mars
 
+# Inherit from proprietary files for Meme Camera
+-include vendor/xiaomi/mars-miuicamera/products/board.mk
+
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
