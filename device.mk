@@ -277,6 +277,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     media \
     nfc \
+    overlay \
     perf
 
 # Radio
