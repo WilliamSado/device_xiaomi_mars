@@ -369,6 +369,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
     audio \
+    av \
     display \
     perf
 
