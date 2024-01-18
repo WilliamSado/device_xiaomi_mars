@@ -259,10 +259,6 @@ TARGET_BOARD_PLATFORM := lahaina
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_sm8350
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Protobuf - Workaround for prebuilt Qualcomm HAL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
