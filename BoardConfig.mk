@@ -88,6 +88,10 @@ DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/platform/hidl/manifest_lahaina.xml \
     $(DEVICE_PATH)/platform/hidl/manifest_xiaomi.xml 
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mars
+TARGET_RECOVERY_DEVICE_MODULES := libinit_mars
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mars
 TARGET_KERNEL_CONFIG := vendor/mars-qgki_defconfig
