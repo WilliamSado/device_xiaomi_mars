@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "williamsado/kernel_xiaomi_mars",
+    "target_path": "kernel/xiaomi/sm8350",
+    "branch": "14.0-rebase"
+  },
+  {
+    "repository": "williamsado/vendor_xiaomi_mars",
+    "target_path": "hardware/xiaomi"
+  }
+]

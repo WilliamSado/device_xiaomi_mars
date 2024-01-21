@@ -144,6 +144,7 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
+bluetooth.device.default_name=Mi 11 Pro
 
 # Camera
 camera.disable_zsl_mode=true
