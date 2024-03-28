@@ -38,3 +38,6 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 
 # Include proprietary files
 include vendor/xiaomi/mars/BoardConfigVendor.mk
+
+# Inherit from proprietary files for Leica Camera
+include vendor/xiaomi/star-miuicamera/products/board.mk

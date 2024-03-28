@@ -42,3 +42,6 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/mars/mars-vendor.mk)
+
+# Call the Leica Camera setup
+$(call inherit-product, vendor/xiaomi/star-miuicamera/products/miuicamera.mk)
