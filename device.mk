@@ -7,6 +7,9 @@
 # Inherit from sm8350-common
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/star-miuicamera/products/miuicamera.mk)
+
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_policy_configuration.xml
