@@ -15,6 +15,10 @@ TARGET_BOOTLOADER_BOARD_NAME := mars
 # Display
 TARGET_SCREEN_DENSITY := 560
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mars
+TARGET_RECOVERY_DEVICE_MODULES := libinit_mars
+
 # Kernel
 KERNEL_FRAGMENT_CONFIG := vendor/star_QGKI.config
 
@@ -24,6 +28,9 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_MODULES_OUT)/fts_touch_spi.ko \
     $(KERNEL_MODULES_OUT)/goodix_fod.ko \
     $(KERNEL_MODULES_OUT)/xiaomi_touch.ko
+
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := mars,star
 
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
