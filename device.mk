@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CertificationOverlayMars \
     FrameworksOverlayMars \
     SettingsOverlayMars \
     SettingsProviderOverlayMars \
