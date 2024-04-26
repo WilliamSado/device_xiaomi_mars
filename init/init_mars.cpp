@@ -88,7 +88,7 @@ void vendor_load_properties() {
         model = "M2102K1AC";
         brand = "Xiaomi";
         device = "mars";
-        fingerprint = "Xiaomi/mars/mars:12/RKQ1.211001.001/V13.0.10.0.SKACNXM:user/release-keys";
+        fingerprint = "Xiaomi/mars/mars:13/RKQ1.211001.001/V14.0.13.0.TKACNXM:user/release-keys";
         description = "mars-user 13 RKQ1.211001.001 V14.0.13.0.TKACNXM release-keys";
         marketname = "Mi 11 Pro";
         mod_device = "mars_global";
