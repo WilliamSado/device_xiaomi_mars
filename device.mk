@@ -20,9 +20,12 @@ PRODUCT_PACKAGES += \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aospa
+PRODUCT_PACKAGES += \
+    FrameworksOverlayMars \
+    SettingsOverlayMars \
+    SettingsProviderOverlayMars \
+    SystemUIOverlayMars \
+    TargetWifiOverlay
 
 # PowerShare
 PRODUCT_PACKAGES += \
@@ -38,10 +41,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# WiFi
-PRODUCT_PACKAGES += \
-    TargetWifiOverlay
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/mars/mars-vendor.mk)
