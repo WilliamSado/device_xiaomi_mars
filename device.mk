@@ -8,7 +8,7 @@
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 
 # Camera
-$(call inherit-product-if-exists, vendor/xiaomi/star-miuicamera/products/miuicamera.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/mars-miuicamera/products/miuicamera.mk)
 
 # Audio configs
 PRODUCT_COPY_FILES += \
