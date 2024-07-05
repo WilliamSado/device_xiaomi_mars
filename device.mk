@@ -32,6 +32,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.aospa.powershare-service
 
+# Refresh Rate
+PRODUCT_ODM_PROPERTIES += \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=false
+
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.xiaomi.mars
