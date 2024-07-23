@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayMars",
+    device_specific: true
+}

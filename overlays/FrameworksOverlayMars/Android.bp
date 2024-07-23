@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FrameworksOverlayMars",
+    device_specific: true
+}
