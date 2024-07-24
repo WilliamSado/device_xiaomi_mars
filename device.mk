@@ -93,15 +93,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/charger_fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qcom
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.default \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -126,13 +117,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# Init scripts
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.target.rc \
+    init.batterysecret.rc \
+    init.mi_perf.rc \
+    init.mi_thermald.rc \
+    init.xiaomi.rc \
+    ueventd.xiaomi.rc
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.batterysecret.rc \
-    $(LOCAL_PATH)/init/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi_thermald.rc \
-    $(LOCAL_PATH)/init/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
-    $(LOCAL_PATH)/init/init.xiaomi-sm8350.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomi-sm8350.perf.rc \
-    $(LOCAL_PATH)/init/init.xiaomi-sm8350.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.xiaomi-sm8350.rc
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.default \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 # IFAA manager
 PRODUCT_PACKAGES += \
@@ -245,10 +242,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
-
-# Ueventd
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/ueventd.xiaomi-sm8350.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
 # Update engine
 PRODUCT_PACKAGES += \
