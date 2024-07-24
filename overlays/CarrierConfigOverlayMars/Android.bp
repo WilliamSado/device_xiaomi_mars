@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "XiaomiSM8350CarrierConfigOverlay",
-    theme: "XiaomiSM8350CarrierConfigOverlay",
+    name: "CarrierConfigOverlayMars",
+    theme: "CarrierConfigOverlayMars",
     sdk_version: "current",
     device_specific: true,
     aaptflags: ["--keep-raw-values"],

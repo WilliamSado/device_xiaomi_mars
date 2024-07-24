@@ -169,17 +169,13 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    XiaomiSM8350CarrierConfigOverlay \
-    XiaomiSM8350FrameworksAOSPAOverlay \
-    XiaomiSM8350FrameworksOverlay \
-    XiaomiSM8350SettingsOverlay \
-    XiaomiSM8350SystemUIOverlay \
+    CarrierConfigOverlayMars \
     CertificationOverlayMars \
     FrameworksOverlayMars \
     SettingsOverlayMars \
     SettingsProviderOverlayMars \
     SystemUIOverlayMars \
-    TargetWifiOverlay
+    WifiOverlayMars
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
