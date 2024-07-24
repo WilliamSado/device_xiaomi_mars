@@ -1,3 +1,7 @@
+<!--
+     Copyright (C) 2024 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
 <manifest version="1.0" type="device">
     <hal format="hidl">
         <name>android.hardware.ir</name>
