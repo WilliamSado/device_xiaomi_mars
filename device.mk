@@ -151,6 +151,9 @@ KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/$(AOSPA_BUILD)/$(KERNEL_MODULES_
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Memtrack
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 # Mlipay
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor \
