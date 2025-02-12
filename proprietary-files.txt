@@ -638,7 +638,7 @@ vendor/firmware/star_wide_bu24618_ois.prog
 # Camera-Megvii
 vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/lib64/libMegviiFacepp-0.5.2.so
-vendor/lib64/libmegface.so
+vendor/lib64/libmegface.so;MODULE_SUFFIX=-vendor
 
 # Camera-sensors
 vendor/lib64/libjpege.so
@@ -829,10 +829,10 @@ vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libminksocket.so
+vendor/lib64/libminksocket.so;MODULE_SUFFIX=-vendor
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
-vendor/lib64/libqcbor.so
+vendor/lib64/libqcbor.so;MODULE_SUFFIX=-vendor
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libspcom.so
