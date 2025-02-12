@@ -62,7 +62,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     android.hardware.graphics.allocator@3.0  \
     libutilscallstack.vendor
-    
+
+PRODUCT_PACKAGES += \
+    liblz4.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
 
@@ -206,6 +209,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
+PRODUCT_PACKAGES += \
+    libssl.vendor
 
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
