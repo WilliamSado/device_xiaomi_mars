@@ -153,7 +153,7 @@ vendor/lib/libresampler.so
 vendor/lib/libsndmonitor.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libsndmonitor_32
 vendor/lib/libspkrprot.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libspkrprot_32
 vendor/lib/libssrec.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libssrec_32
-vendor/lib/libvideoNS.so
+vendor/lib/libvideoNS.so;DISABLE_CHECKELF
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
