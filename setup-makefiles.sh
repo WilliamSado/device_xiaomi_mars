@@ -68,6 +68,22 @@ function lib_to_package_fixup_vendor_variants() {
             echo "$1-vendor"
             ;;
 
+        audio.primary.lahaina | \
+            libsndmonitor | \
+            libcomprcapture | \
+            libhdmiedid | \
+            libhfp | \
+            libexthwplugin | \
+            liba2dpoffload | \
+            libbatterylistener | \
+            libhdmiedid | \
+            libhdmipassthru | \
+            libhfp | \
+            libssrec | \
+            libspkrprot)
+            echo "$1_sm8350"
+            ;;
+
         libOmxCore | \
             libwfdaac_vendor | \
             libwpa_client) ;;
