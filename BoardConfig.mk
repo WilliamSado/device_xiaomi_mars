@@ -63,8 +63,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
-KERNEL_FRAGMENT_CONFIG := vendor/star_QGKI.config
+KERNEL_DEFCONFIG := vendor/star-qgki_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
