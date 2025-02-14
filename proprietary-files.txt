@@ -141,6 +141,10 @@ vendor/lib/libvideoNS.so;DISABLE_CHECKELF
 # Camera
 vendor/bin/hw/android.hardware.camera.provider@2.4-virtual-camera-service
 vendor/etc/init/android.hardware.camera.provider@2.4-virtual-camera-service.rc
+vendor/lib/libsns_fastRPC_util.so
+vendor/lib/libsns_low_lat_stream_stub.so
+vendor/lib/libsnsdiaglog.so
+vendor/lib/libsnsapi.so
 vendor/lib64/camera/com.qti.eeprom.mars_ofilm_ov13b10_p24c64f_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.mars_semco_s5kgn2_p24c128e_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.mars_sunny_ov08a10_gt24p128c_tele5x_eeprom.so
@@ -288,13 +292,9 @@ vendor/lib64/libremosaiclib.so
 vendor/lib64/libsnpe_htp.so
 vendor/lib64/libsns_api.so
 vendor/lib64/libsns_device_mode_stub.so
-vendor/lib/libsns_fastRPC_util.so
 vendor/lib64/libsns_fastRPC_util.so
-vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib/libsnsapi.so
 vendor/lib64/libsns_registry_skel.so
-vendor/lib/libsnsdiaglog.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
@@ -732,6 +732,8 @@ vendor/etc/elliptic_sensor.xml
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/lib/libsensorslog.so
+vendor/lib/libssc.so
 vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -743,6 +745,14 @@ vendor/lib64/sensors.elliptic@2.0.so
 vendor/lib64/sensors.mius.proximity.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.touch.detect.so
+
+# Sensors (citsensor)
+vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
+vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
 
 # Sensors configs
 vendor/etc/sensors/calibratedCheck.json
