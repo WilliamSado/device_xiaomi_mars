@@ -120,10 +120,7 @@ vendor/lib/hw/audio.primary.lahaina.so;MODULE_SUFFIX=_sm8350;OVERRIDES=audio.pri
 vendor/lib/liba2dpoffload.so;MODULE_SUFFIX=_sm8350;OVERRIDES=liba2dpoffload_32
 vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudioalsa.so
 vendor/lib/libaudiocloudctrl.so
-vendor/lib/libaudioconfigstore.so
-vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libbatterylistener.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libbatterylistener_32
 vendor/lib/libhdmiedid.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libhdmiedid_32
