@@ -116,8 +116,8 @@ vendor/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
 
 # Audio Hardware
-vendor/lib/hw/audio.primary.lahaina.so
-vendor/lib/liba2dpoffload.so
+vendor/lib/hw/audio.primary.lahaina.so;MODULE_SUFFIX=_sm8350;OVERRIDES=audio.primary.lahaina_32
+vendor/lib/liba2dpoffload.so;MODULE_SUFFIX=_sm8350;OVERRIDES=liba2dpoffload_32
 vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
@@ -125,18 +125,18 @@ vendor/lib/libaudiocloudctrl.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libhdmiedid.so
-vendor/lib/libcomprcapture.so
-vendor/lib/libhfp.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmipassthru.so
+vendor/lib/libbatterylistener.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libbatterylistener_32
+vendor/lib/libhdmiedid.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libhdmiedid_32
+vendor/lib/libcomprcapture.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libcomprcapture_32
+vendor/lib/libhfp.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libhfp_32
+vendor/lib/libexthwplugin.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libexthwplugin_32
+vendor/lib/libhdmipassthru.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libhdmipassthru_32
 vendor/lib/libqtigef.so
 vendor/lib/libresampler.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
-vendor/lib/libssrec.so
-vendor/lib/libvideoNS.so
+vendor/lib/libsndmonitor.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libsndmonitor_32
+vendor/lib/libspkrprot.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libspkrprot_32
+vendor/lib/libssrec.so;MODULE_SUFFIX=_sm8350;OVERRIDES=libssrec_32
+vendor/lib/libvideoNS.so;DISABLE_CHECKELF
 
 # Camera
 vendor/bin/hw/android.hardware.camera.provider@2.4-virtual-camera-service
@@ -223,8 +223,6 @@ vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/libAF.so
 vendor/lib64/libBlinkStub.so
 vendor/lib64/libFlickerDet.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libSuperSensorHVX.so
@@ -253,7 +251,6 @@ vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libhexagon_controller.so
 vendor/lib64/libipebpsstriping.so
-vendor/lib64/libmegface.so
 vendor/lib64/libmiai_facialrestoration.so
 vendor/lib64/libmiai_portraitsupernight.so
 vendor/lib64/libmialgo_ai_vision.so
@@ -262,7 +259,7 @@ vendor/lib64/libmialgo_ellc.so
 vendor/lib64/libmialgo_ie_capture.so
 vendor/lib64/libmialgo_ie_preview.so
 vendor/lib64/libmialgo_image_colourkeeping.so
-vendor/lib64/libmialgo_pureShot.so
+vendor/lib64/libmialgo_pureShot.so;DISABLE_CHECKELF
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
@@ -285,15 +282,19 @@ vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
 vendor/lib64/libportrait_blur.so
 vendor/lib64/libqll10.so
-vendor/lib64/libqllengine.so
+vendor/lib64/libqllengine.so;DISABLE_CHECKELF
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libsnpe_htp.so
 vendor/lib64/libsns_api.so
 vendor/lib64/libsns_device_mode_stub.so
+vendor/lib/libsns_fastRPC_util.so
 vendor/lib64/libsns_fastRPC_util.so
+vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib/libsnsapi.so
 vendor/lib64/libsns_registry_skel.so
+vendor/lib/libsnsdiaglog.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
@@ -320,11 +321,11 @@ vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_bodyslim.so
 vendor/lib64/libarcsoft_distortion_correction.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_qnnhtp.so
-vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF
 
 # Camera (camerax)
 vendor/lib/libcamxexternalformatutils.so
@@ -508,7 +509,6 @@ vendor/etc/camera/ellc_params.xml
 vendor/etc/camera/intsense_config_optical_zoom_3sat.bin
 vendor/etc/camera/intsense_config_optical_zoom_3sat_pro.bin
 vendor/etc/camera/mars_motiontuning.xml
-vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/model_ai_dxo.dlc
@@ -557,7 +557,7 @@ vendor/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.supernight.so
 vendor/lib64/libXMFace.so
 vendor/lib64/libanc_dc_base.so
-vendor/lib64/libanc_dc_plugin_xiaomi_v2.so
+vendor/lib64/libanc_dc_plugin_xiaomi_v2.so;DISABLE_CHECKELF
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
 vendor/lib64/libcom.xiaomi.debug.so
@@ -566,7 +566,7 @@ vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libmiStereoFactoryRemapBasicLib.so
 vendor/lib64/libmiStereoFactoryRemapLib.so
-vendor/lib64/libmiStereoFactoryRemapLib_v2.so
+vendor/lib64/libmiStereoFactoryRemapLib_v2.so;FIX_SONAME
 vendor/lib64/libmiai_deblur.so
 vendor/lib64/librelight_only.so
 vendor/lib64/libsupermoon.so
@@ -584,12 +584,17 @@ vendor/firmware/star_wide_bu24618_ois.coeff
 vendor/firmware/star_wide_bu24618_ois.mem
 vendor/firmware/star_wide_bu24618_ois.prog
 
+# Camera-Megvii
+vendor/etc/camera/megviifacepp_0_5_2_model
+vendor/lib64/libMegviiFacepp-0.5.2.so
+vendor/lib64/libmegface.so;MODULE_SUFFIX=-vendor
+
 # Camera-sensors
 vendor/lib64/libjpege.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac3.so
-vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
@@ -644,6 +649,14 @@ vendor/firmware/evass.b18
 vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
+
+# Diag
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/lib/libdiag.so
+vendor/lib64/libdiag.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
 
 # Display calibration
 vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
