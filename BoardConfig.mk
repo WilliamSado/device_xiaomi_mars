@@ -20,7 +20,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mars
 TARGET_RECOVERY_DEVICE_MODULES := libinit_mars
 
 # Kernel
-KERNEL_FRAGMENT_CONFIG := vendor/star_QGKI.config
+KERNEL_DEFCONFIG := vendor/star-qgki_defconfig
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES += \
