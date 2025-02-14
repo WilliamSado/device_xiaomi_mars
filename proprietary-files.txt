@@ -649,14 +649,6 @@ vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
-# Diag
-vendor/bin/diag-router
-vendor/etc/init/vendor.qti.diag.rc
-vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/lib/libdiag.so
-vendor/lib64/libdiag.so
-vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
-
 # Display calibration
 vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/mdss_dsi_k2_38_08_0a_dsc_cmd_mi.xml
