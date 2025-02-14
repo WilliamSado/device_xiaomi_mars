@@ -229,7 +229,7 @@ vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libSuperSensorHVX.so
 vendor/lib64/libSuperSensorSDK.so
 vendor/lib64/libaidenoiser.so
-vendor/lib64/libalAILDC.so
+vendor/lib64/libalAILDC.so;DISABLE_CHECKELF
 vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalhLDC.so
