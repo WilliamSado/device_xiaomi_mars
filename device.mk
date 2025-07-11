@@ -7,21 +7,14 @@
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 
 # Fingerprint
-TARGET_HAS_UDFPS := true
+$(call inherit-product, $(LOCAL_PATH)/platform/board/fingerprint.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_PACKAGES += \
-    FrameworksResMars \
-    SettingsProviderResMars \
-    SettingsResMars \
-    SystemUIResMars \
-    WifiResMars
+$(call inherit-product, $(LOCAL_PATH)/platform/board/overlay.mk)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/android/overlay-lineage
 
 # PowerShare
-TARGET_HAS_POWERSHARE := true
+$(call inherit-product, $(LOCAL_PATH)/platform/board/powershare.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
