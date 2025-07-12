@@ -5,6 +5,7 @@
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureMars \
     FrameworksResMars \
     SettingsProviderResMars \
     SettingsResMars \
