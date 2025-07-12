@@ -7,6 +7,7 @@
 PRODUCT_PACKAGES += \
     ApertureMars \
     FrameworksResMars \
+    LineageSDKMars \
     SettingsProviderResMars \
     SettingsResMars \
     SystemUIResMars \

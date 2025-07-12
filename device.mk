@@ -11,7 +11,6 @@ $(call inherit-product, $(LOCAL_PATH)/platform/board/fingerprint.mk)
 
 # Overlays
 $(call inherit-product, $(LOCAL_PATH)/platform/board/overlay.mk)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/android/overlay-lineage
 
 # PowerShare
 $(call inherit-product, $(LOCAL_PATH)/platform/board/powershare.mk)
