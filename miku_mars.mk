@@ -6,14 +6,17 @@
 # Inherit from mars device
 $(call inherit-product, device/xiaomi/mars/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Miku UI stuff.
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
+
+# Maintainer
+MIKU_MASTER := AmeChan
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mars
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2102K1AC
-PRODUCT_NAME := lineage_mars
+PRODUCT_NAME := miku_mars
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="mars_global-user 14 UKQ1.231207.002 V816.0.11.0.UKAMIXM release-keys" \
