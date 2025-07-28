@@ -7,13 +7,13 @@
 $(call inherit-product, device/xiaomi/mars/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/sun/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mars
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2102K1AC
-PRODUCT_NAME := lineage_mars
+PRODUCT_NAME := sun_mars
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="mars_global-user 14 UKQ1.240624.001 V2.0.1.0.UKACNXM release-keys" \

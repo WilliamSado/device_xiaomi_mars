@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mars.mk
+    $(LOCAL_DIR)/sun_mars.mk

@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/overlay/config-odm.xml:$(TARGET_COPY_OUT_ODM)/overlay/config/config.xml
 
 # PowerShare
-TARGET_HAS_POWERSHARE := true
+#TARGET_HAS_POWERSHARE := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
